@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,48 +8,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="screenActive" id="startScreen">
-            <h1>Quiz Time!</h1>
-            <p>Test your knowledge with these fun questions</p>
-            <button id="startBtn">Start Quiz</button>
 
-        </div>
-        <div class="Screen" id="quizScreen">
-            <div class="quiz-header">
-                <h2 id="question-text">Question goes here!</h2>
-                <div class="Ques-info">
-                    <p>
-                        Question <span id="Current Question">1</span>of <span id="total-questions">5</span>
-                    </p>
-                    <p>
-                      Score:<span id="score">0</span>
-                    </p>
+```
+<div class="container">
 
-                </div>
-            </div>
-            <div id="answercontainer" class="answercontainer">
-              
-            </div>
-            <div id="progress-bar">
-                <div id="progress" class="progress">
+    <!-- Start Screen -->
+    <div class="screen active" id="startScreen">
+        <h1>Quiz Time!</h1>
+        <p>Test your knowledge with these fun questions</p>
+        <button id="startBtn">Start Quiz</button>
+    </div>
 
-                </div>
-            </div>
-        </div>
-        <div id="Result-Screen" class="screen">
-            <h1>Quiz results</h1>
-            <div class="result-info">
+    <!-- Quiz Screen -->
+    <div class="screen" id="quizScreen">
+
+        <div class="quiz-header">
+            <h2 id="question-text">Question goes here!</h2>
+
+            <div class="ques-info">
                 <p>
-                You scored <span id="final-score">0</span> out of <span id="max-score"> 5</span>
+                    Question
+                    <span id="currentQuestion">1</span>
+                    of
+                    <span id="total-questions">5</span>
                 </p>
 
-                <div id="resultmsg">Good job!</div>
-
+                <p>
+                    Score: <span id="score">0</span>
+                </p>
             </div>
-            <button id="restartBtn">Restart Quiz</button>
         </div>
+
+        <div id="answercontainer" class="answercontainer">
+            <!-- Answer buttons will be added by JavaScript -->
+        </div>
+
+        <div id="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+
     </div>
-    <script src="script.js"></script>
+
+    <!-- Result Screen -->
+    <div class="screen" id="resultScreen">
+        <h1>Quiz Results</h1>
+
+        <div class="result-info">
+            <p>
+                You scored
+                <span id="final-score">0</span>
+                out of
+                <span id="max-score">5</span>
+            </p>
+
+            <div id="resultmsg">Good job!</div>
+        </div>
+
+        <button id="restartBtn">Restart Quiz</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
